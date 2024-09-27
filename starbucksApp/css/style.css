@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: SoDoSans, sans-serif;
+    background-color: #f7f7f7;
+
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 99999;
+    float: right;
+}
+
+header img {
+    height: 3rem;
+    cursor: pointer;
+}
+
+.navbar {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li i {
+    font-size: 1.3rem;
+}
+
+.navbar ul li a {
+    margin: 0.4rem;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: .13rem;
+}
+
+/* Sayfa düzeni */
+main {
+    position: relative;
+    display: flex;
+    float: right;
+}
+
+/* Video konteyneri */
+.video-container {
+    width: 100%;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+    float: right;
+    pointer-events: none;
+}
+
+/* Video ayarları */
+.video-container video {
+    height: 100vh;
+    width: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* content */
+
+.content {
+    padding: 20px 40px 40px 40px;
+    width: 60%;
+    height: 100%;
+    float: right;
+    z-index: 9999;
+}
+
+.content-contain {
+    width: 100%;
+    float: left;
+}
+
+.content-items h3,
+p {
+
+    margin: 1.8rem 1.2rem 0rem 1.2rem;
+}
+
+.content-items>img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.content-items>button {
+    margin: 1.2rem 0 1.2rem 1.2rem;
+}
+
+.content-items>h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.news-content {
+    width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+    align-items: flex-start;
+}
+
+.mt-item {
+    margin: 4rem 0rem 0rem 0rem;
+}
+
+.news-content>img {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 1.2rem;
+}
+
+/* news text */
+
+.news-text {
+    width: 100%;
+}
+
+.news-content h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.news-text button {
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+    float: right;
+    background-color: #fff;
+    height: 65rem;
+    width: 60%;
+    color: #333;
+}
+
+
+.menu-footer {
+    margin: 0 3rem 3rem 3rem;
+}
+
+.menu-item {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.menu-content a,h6{
+    text-decoration: none;
+    color: #000000a0;
+    margin: 1rem 0 0 1rem;
+    font-size: 1rem;
+}
+
+.menu-content a,h6:hover{
+    color: #000000d6;
+}
+
+
+.menu-item.active i {
+    transform: rotate(180deg);
+}
+
+.menu-item h2,
+i {
+    font-weight: 100;
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.263);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    margin: 1rem 3rem 0 3rem;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000000bd;
+}
+
+.kvkk {
+    margin: 0 3rem 3rem 2rem;
+}
+
+.kvkk p{
+    cursor: pointer;
+}
+
+.kvkk button {
+    margin: 1rem 0 0 1rem;
+}
+
+button a{
+    color: #008248;
+}
+
+/* Media */
+
+@media screen and (max-width: 992px) {
+    main {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    /* Video konteyneri */
+    .video-container {
+        position: relative;
+        width: 100%;
+        top: 3rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 0;
+        float: right;
+        pointer-events: none;
+    }
+
+    /* Video ayarları */
+    .video-container video {
+        height: 85vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .content {
+        padding: 20px 40px 40px 40px;
+        width: 100%;
+        height: 100%;
+        float: left;
+        z-index: 9999;
+    }
+
+    .footer {
+        float: right;
+        background-color: #fff;
+        height: 65rem;
+        width: 100%;
+        color: #333;
+    }
+}
+
+#hamburger-icon,
+#close-icon {
+    display: none;
+}
+
+@media screen and (max-width:1188px) {
+    #hamburger-icon {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        background-color: #fff;
+        align-items: center;
+        padding: 1rem 1rem 1rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+    }
+
+    header img {
+        height: 2.5rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #hamburger-icon {
+        display: block;
+    }
+
+    .content {
+        padding: 0rem 1rem 1rem 1rem;
+        width: 100%;
+        height: 100%;
+        float: right;
+        z-index: 9999;
+    }
+
+    .content-contain {
+        width: 100%;
+    }
+
+    main {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    /* Video konteyneri */
+    .video-container {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 0;
+        float: right;
+        pointer-events: none;
+    }
+
+    /* Video ayarları */
+    .video-container video {
+        height: 85vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .content-items h3,
+    p {
+        margin: 0px;
+    }
+
+    .content-items>img {
+        width: 100%;
+    }
+
+    .content-items>button {
+        margin: 1.2rem 0 1.2rem 0;
+    }
+
+    .content-items>h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .news-content {
+        width: 100%;
+        height: auto;
+        display: block;
+        align-items: flex-start;
+    }
+
+    .mt-item {
+        margin: 3rem 0rem 0rem 0rem;
+    }
+
+    .news-content>img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    /* news text */
+
+    .news-text {
+        width: 100%;
+    }
+
+    .news-content h3 {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    .news-text p {
+        margin-bottom: 1rem;
+    }
+
+    .news-text button {
+        cursor: pointer;
+    }
+
+
+
+
+    /* navbar hambburger */
+
+    header {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1rem 1rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        z-index: 99999;
+        float: right;
+    }
+
+    header img {
+        height: 2.5rem;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        padding: 1rem;
+        left: 0;
+        padding: 1rem;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #hamburger-icon {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    #close-icon {
+        font-size: 2rem;
+        color: #333
+    }
+
+    /* Menü açık olduğunda göster */
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        float: left;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    .btn-container button {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+    .btn-container {
+        display: flex;
+        margin: 1rem;
+        justify-content: space-between;/
+    }
+
+    .btn-container .btn {
+        margin-right: 1rem;
+        /* Butonlar arasına sağdan boşluk ekle */
+    }
+
+    .footer {
+        float: right;
+        background-color: #fff;
+        height: 65rem;
+        width: 100%;
+        color: #333;
+    }
+    
+    
+    .menu-footer {
+        margin: 0 3rem 3rem 3rem;
+    }
+    
+    .menu-item {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    
+    .menu-item h2,
+    i {
+        font-weight: 100;
+        cursor: pointer;
+    }
+    
+    .dot {
+        display: flex;
+        justify-content: center;
+    }
+    
+    hr {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid rgba(0, 0, 0, 0.263);
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        margin: 1rem 3rem 0 3rem;
+    }
+    
+    .social-icons a {
+        color: #000;
+        font-size: 1.8rem;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #000000bd;
+    }
+    
+    .kvkk {
+        margin: 1rem 3rem 3rem 2rem;
+    }
+    
+    .kvkk p{
+        margin: 1rem;
+        cursor: pointer;
+    }
+    
+    .kvkk button {
+        margin: 1rem 0 0 1rem;
+    }
+}
